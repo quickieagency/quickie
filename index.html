@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quickie - Your Trusted Service Provider</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        #hero a {
+            margin-top: 20px;
+            display: inline-block;
+            background-color: #ff8c00;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #hero a:hover {
+            background-color: #e07b00;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 20px;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            text-align: center;
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        /* Cards */
+        .service-card {
+            border: none;
+            transition: transform 0.3s ease;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contact Form */
+        .form-control, .btn {
+            border-radius: 6px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Quickie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#healthcare">Healthcare</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#plumbing-electric">Repairs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mobile-computer">Tech Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#essentials">Essentials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#food">Food</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#parcel">Parcel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h1>Quickie Services</h1>
+            <p>Your One-Stop Solution for All Services</p>
+            <a href="#services">Explore Services</a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <p class="text-center text-muted mb-5">Explore the wide range of services we offer to make your life easier.</p>
+            <div class="row g-4">
+                <!-- Service Card 1: Primary Healthcare -->
+                <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Healthcare Service">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Primary Healthcare</h5>
+                            <p class="card-text">Get professional healthcare services delivered to your home.</p>
+                            <!-- Learn More Button -->
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#healthcareModal">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 2: Plumbing & Electrical -->
+                <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Plumbing and Electrical Service">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Plumbing & Electrical</h5>
+                            <p class="card-text">Get reliable plumbing and electrical repairs, maintenance, and installation.</p>
+                            <!-- Learn More Button -->
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#plumbingModal">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Service Card for Computer Service -->
+<div class="col-md-4">
+    <div class="card service-card h-100">
+        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Computer Service">
+        <div class="card-body text-center">
+            <h5 class="card-title">Computer Services</h5>
+            <p class="card-text">Troubleshoot, repair, and maintain your computer with our expert services.</p>
+            <!-- Learn More Button -->
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#computerModal">Learn More</button>
+        </div>
+    </div>
+</div>
+
+<!-- Service Card for Food Delivery -->
+<div class="col-md-4">
+    <div class="card service-card h-100">
+        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Food Delivery">
+        <div class="card-body text-center">
+            <h5 class="card-title">Food Delivery</h5>
+            <p class="card-text">Delicious meals delivered to your doorstep in no time.</p>
+            <!-- Learn More Button -->
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#foodModal">Learn More</button>
+        </div>
+    </div>
+</div>
+
+<!-- Service Card for Daily Essentials -->
+<div class="col-md-4">
+    <div class="card service-card h-100">
+        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Daily Essentials">
+        <div class="card-body text-center">
+            <h5 class="card-title">Daily Essentials</h5>
+            <p class="card-text">Fresh groceries and household items delivered to your doorstep.</p>
+            <!-- Learn More Button -->
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#essentialsModal">Learn More</button>
+        </div>
+    </div>
+</div>
+
+<!-- Service Card for Nationwide Parcel Delivery -->
+<div class="col-md-4">
+    <div class="card service-card h-100">
+        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Parcel Delivery">
+        <div class="card-body text-center">
+            <h5 class="card-title">Nationwide Parcel Delivery</h5>
+            <p class="card-text">Deliver your parcels quickly and safely anywhere in the country.</p>
+            <!-- Learn More Button -->
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#parcelModal">Learn More</button>
+        </div>
+    </div>
+</div>
+
+<!-- Other Service Cards -->                <!-- ... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Primary Healthcare Modal -->
+    <div class="modal fade" id="healthcareModal" tabindex="-1" aria-labelledby="healthcareModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="healthcareModalLabel">Primary Healthcare</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Our Primary Healthcare service offers in-home consultations with experienced doctors, nurses, and other healthcare professionals. Whether you need a routine check-up, treatment for an illness, or medical advice, we bring healthcare directly to your doorstep.</p>
+                    <ul>
+                        <li>Doctor Consultations</li>
+                        <li>Emergency Care</li>
+                        <li>Medical Tests</li>
+                        <li>Home Health Monitoring</li>
+                    </ul>
+                    <p>Contact us now to schedule your consultation and enjoy the convenience of healthcare at home.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#contact" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Plumbing & Electrical Modal -->
+    <div class="modal fade" id="plumbingModal" tabindex="-1" aria-labelledby="plumbingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="plumbingModalLabel">Plumbing & Electrical</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Our Plumbing & Electrical service provides professional solutions for all your home and office needs. Whether it’s a leaking pipe or an electrical malfunction, our experienced team is ready to help.</p>
+                    <ul>
+                        <li>Leak Repairs</li>
+                        <li>Pipe Installations</li>
+                        <li>Electrical Wiring</li>
+                        <li>Electrical Repair & Maintenance</li>
+                    </ul>
+                    <p>Contact us now to get fast and reliable service for your plumbing and electrical needs.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#contact" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Computer Service Modal -->
+<div class="modal fade" id="computerModal" tabindex="-1" aria-labelledby="computerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="computerModalLabel">Computer Services</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Our Computer Service offers a range of solutions to keep your device running smoothly. We provide troubleshooting, repair, and maintenance services for laptops, desktops, and other computer-related issues.</p>
+                <ul>
+                    <li>System Optimization</li>
+                    <li>Software Installation & Updates</li>
+                    <li>Virus & Malware Removal</li>
+                    <li>Hardware Repair & Upgrades</li>
+                    <li>Data Recovery</li>
+                    <li>Networking & Setup</li>
+                </ul>
+                <p>Contact us for fast, reliable, and affordable computer services at your convenience.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Food Delivery Modal -->
+<div class="modal fade" id="foodModal" tabindex="-1" aria-labelledby="foodModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="foodModalLabel">Food Delivery Service</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Craving something delicious? Our Food Delivery service brings a wide variety of meals from local restaurants straight to your doorstep. Whether it's a quick snack or a full meal, we've got you covered!</p>
+                <ul>
+                    <li>Wide range of cuisines to choose from</li>
+                    <li>Timely delivery right to your home</li>
+                    <li>Freshly prepared meals from trusted restaurants</li>
+                    <li>Track your delivery in real time</li>
+                    <li>Order from the comfort of your home</li>
+                </ul>
+                <p>Order your favorite food now and enjoy a delicious meal delivered at your doorstep!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Daily Essentials Modal -->
+<div class="modal fade" id="essentialsModal" tabindex="-1" aria-labelledby="essentialsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="essentialsModalLabel">Daily Essentials Service</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Our Daily Essentials service ensures you never run out of the basic necessities. From fresh groceries to household items, we deliver everything you need, right to your door.</p>
+                <ul>
+                    <li>Fresh fruits and vegetables</li>
+                    <li>Dairy products and bread</li>
+                    <li>Cleaning supplies</li>
+                    <li>Personal care products</li>
+                    <li>Quick and reliable delivery</li>
+                </ul>
+                <p>Stay stocked up with our hassle-free delivery service. Order now and get everything delivered with ease!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Nationwide Parcel Delivery Modal -->
+<div class="modal fade" id="parcelModal" tabindex="-1" aria-labelledby="parcelModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="parcelModalLabel">Nationwide Parcel Delivery</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>With our Nationwide Parcel Delivery service, sending packages across the country has never been easier. We ensure fast, reliable, and secure delivery of your items to any location.</p>
+                <ul>
+                    <li>Door-to-door pickup and delivery</li>
+                    <li>Real-time tracking of your parcel</li>
+                    <li>Affordable pricing for all parcel sizes</li>
+                    <li>Safe handling of fragile and valuable items</li>
+                    <li>Guaranteed on-time delivery</li>
+                </ul>
+                <p>Whether it’s a document or a package, rely on us to get it delivered swiftly and securely!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <p class="text-center">Feel free to reach out for any inquiries.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Write your message"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Quickie Services. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
