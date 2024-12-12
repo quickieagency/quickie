@@ -11,40 +11,31 @@
         }
 
         /* Hero Section */
-        #hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        url('') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 120px 20px;
-        }
+        /* Hero Section Styling */
+#hero {
+    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(40, 167, 69, 0.8)),
+                url('') no-repeat center center/cover;
+    height: 100vh;
+}
 
-        #hero h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
+#hero h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
-        #hero p {
-            font-size: 1.2rem;
-            margin-top: 15px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        }
+#hero p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
 
-        #hero a {
-            margin-top: 20px;
-            display: inline-block;
-            background-color: #ff8c00;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-weight: bold;
-            text-decoration: none;
-        }
+#hero .btn {
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5);
+    border-radius: 30px;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
 
-        #hero a:hover {
-            background-color: #e07b00;
-        }
+#hero .btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 14px rgba(0, 123, 255, 0.7);
+}
 
         /* Section Styling */
         section {
@@ -90,6 +81,39 @@
             padding: 20px 0;
             text-align: center;
         }
+        /* navbar customization */
+/* Navbar Background White */
+.navbar {
+    background-color: #ffffff !important; /* White background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+/* Navbar Text Colors */
+.navbar .nav-link {
+    color: #18191a !important; /* Professional blue for links */
+    font-weight: 500; /* Medium weight for better readability */
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #444647 !important; /* Darker blue on hover for better contrast */
+}
+
+.navbar .navbar-brand {
+    color: #28A745 !important; /* Green color for branding */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+.navbar .navbar-toggler-icon {
+    filter: invert(20%); /* Ensure toggler icon is visible on white background */
+}
+        
+        .navbar-logo {
+            width: 100px;
+            height: 60px;
+        }
+        
+  
     </style>
 </head>
 <body>
@@ -97,18 +121,18 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Quickie</a>
+            <a class="navbar-brand" href="#"><img src="https://i.ibb.co.com/bHHL54y/quickie-Logo2.png" class="navbar-logo" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#healthcare">QuickHealth</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#plumbing-electric">FixFast</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#mobile-computer">TechMate</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#essentials">DailyDrop</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#food">FlavorRush</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#parcel">ParcelPro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#healthcareModal">QuickHealth</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#fixfastModal">FixFast</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#techmateModal">TechMate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#essentialsModal">DailyDrop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#flavourRushModal">FlavorRush</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#parcelModal">ParcelPro</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -116,13 +140,13 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <h1>Quickie Services</h1>
-            <p>Your One-Stop Solution for All Services</p>
-            <a href="#services">Explore Services</a>
-        </div>
-    </section>
+    <section id="hero" class="d-flex align-items-center text-center text-white">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Welcome to Quickie Services</h1>
+        <p class="lead mt-3">Your One-Stop Solution for All Home Services</p>
+        <a href="#services" class="btn btn-primary btn-lg mt-4">Explore Services</a>
+    </div>
+</section>
 
     <!-- Services -->
     <section id="services" class="py-5 bg-light">
@@ -133,43 +157,49 @@
                 <!-- Service Card 1: Primary Healthcare -->
                 <div class="col-md-4">
                     <div class="card service-card h-100">
-                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Healthcare Service">
+                        <img src="https://i.ibb.co.com/r7vkFsH/quickhelth.webp" alt="QuickHealth Service" style="width: 100%; max-width: 400px; height: 250px; border-radius: 10px;">
                         <div class="card-body text-center">
                             <h5 class="card-title">QuickHealth</h5>
                             <p class="card-text">Your On-Call Medical Partner</p>
                             <!-- Learn More Button -->
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#healthcareModal">Learn More</button>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#healthcareModal">
+    Learn More
+</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Service Card 2: Plumbing & Electrical -->
+                <!-- Service Card 2: fixFast -->
                 <div class="col-md-4">
                     <div class="card service-card h-100">
-                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Plumbing and Electrical Service">
+                        <img src="https://i.ibb.co.com/JvmQQPQ/artbreeder-image-2024-12-11-T19-04-59-051-Z.jpg" style="width: 100%; max-width: 400px; height: 250px; border-radius: 10px; "class="card-img-top" alt="Plumbing and Electrical Service">
                         <div class="card-body text-center">
                             <h5 class="card-title">FixFast</h5>
                             <p class="card-text">Swift Solutions for Home Repairs</p>
                             <!-- Learn More Button -->
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#plumbingModal">Learn More</button>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fixfastModal">
+    Learn More
+</button>
                         </div>
                     </div>
                 </div>
 
-<!-- Service Card for Computer Service -->
+<!-- Service card for techMate -->
 <div class="col-md-4">
     <div class="card service-card h-100">
-        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Computer Service">
+        <img src="https://i.ibb.co.com/p2BP1pD/craiyon-011834-ai-painting-app-for-windows.png" style="width: 100%; max-width: 400px; height: 250px; border-radius: 10px; "class="card-img-top" alt="Computer Service">
         <div class="card-body text-center">
             <h5 class="card-title">TechMate</h5>
             <p class="card-text">Your Reliable Tech Support</p>
             <!-- Learn More Button -->
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#computerModal">Learn More</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#techmateModal">
+    Learn More
+</button>
         </div>
     </div>
 </div>
 
-<!-- Service Card for Food Delivery -->
+<!-- Service Card for FlavourRoush -->
 <div class="col-md-4">
     <div class="card service-card h-100">
         <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Food Delivery">
@@ -177,7 +207,9 @@
             <h5 class="card-title">FlavorRush</h5>
             <p class="card-text">Taste That Travels</p>
             <!-- Learn More Button -->
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#foodModal">Learn More</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#flavourRushModal">
+    Learn More
+</button>
         </div>
     </div>
 </div>
@@ -213,79 +245,74 @@
         </div>
     </section>
 
-    <!-- Primary Healthcare Modal -->
+    <!-- QuickHelth Modal -->
     <div class="modal fade" id="healthcareModal" tabindex="-1" aria-labelledby="healthcareModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="healthcareModalLabel">QuickHealth</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Our QuickHealth service offers in-home consultations with experienced doctors, nurses, and other healthcare professionals. Whether you need a routine check-up, treatment for an illness, or medical advice, we bring healthcare directly to your doorstep.</p>
-                    <ul>
-                        <li>Doctor Consultations</li>
-                        <li>Emergency Care</li>
-                        <li>Medical Tests</li>
-                        <li>Home Health Monitoring</li>
-                    </ul>
-                    <p>Contact us now to schedule your consultation and enjoy the convenience of healthcare at home.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a href="#contact" class="btn btn-primary">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Plumbing & Electrical Modal -->
-    <div class="modal fade" id="plumbingModal" tabindex="-1" aria-labelledby="plumbingModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="plumbingModalLabel">FixFast</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Our FixFast service provides professional solutions for all your home and office needs. Whether it’s a leaking pipe or an electrical malfunction, our experienced team is ready to help.</p>
-                    <ul>
-                        <li>Leak Repairs</li>
-                        <li>Pipe Installations</li>
-                        <li>Electrical Wiring</li>
-                        <li>Electrical Repair & Maintenance</li>
-                    </ul>
-                    <p>Contact us now to get fast and reliable service for your plumbing and electrical needs.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a href="#contact" class="btn btn-primary">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!-- Computer Service Modal -->
-<div class="modal fade" id="computerModal" tabindex="-1" aria-labelledby="computerModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="computerModalLabel">TechMate</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <h5 class="modal-title" id="healthcareModalLabel">QuickHealth</h5>
+                <div class="d-flex align-items-center">
+                    <!-- Language Switcher Buttons -->
+                    <button class="btn btn-outline-primary btn-sm me-2" data-lang-switch data-lang="en" data-modal="healthcareModal">English</button>
+                    <button class="btn btn-outline-success btn-sm" data-lang-switch data-lang="bn" data-modal="healthcareModal">বাংলা</button>
+                    <button type="button" class="btn-close ms-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
             </div>
             <div class="modal-body">
-                <p>Our TechMate offers a range of solutions to keep your device running smoothly. We provide troubleshooting, repair, and maintenance services for laptops, desktops, and other computer-related issues.</p>
+                <!-- English Content -->
+                <div class="lang-content lang-en">
+                    <h6 class="text-success">Your Health, Our Priority</h6>
+                <p>
+                    Introducing <strong>QuickHealth</strong>, an innovative healthcare service that brings top-quality care to your doorstep. Say goodbye to long waiting times and exhausting clinic visits. Enjoy convenient primary health check-ups, essential tests, and medicine delivery—all from the comfort of your home.
+                </p>
+                <h6 class="text-primary">Why Choose QuickHealth?</h6>
                 <ul>
-                    <li>System Optimization</li>
-                    <li>Software Installation & Updates</li>
-                    <li>Virus & Malware Removal</li>
-                    <li>Hardware Repair & Upgrades</li>
-                    <li>Data Recovery</li>
-                    <li>Networking & Setup</li>
+                    <li>Skilled and certified healthcare professionals providing accurate and efficient service.</li>
+                    <li>On-demand check-ups for blood pressure, sugar level, cholesterol, and more.</li>
+                    <li>Sample collection for specialized tests directly from your home.</li>
+                    <li>Reliable and fast medicine delivery service.</li>
+                    <li>Effortless tracking and monitoring of your health reports.</li>
                 </ul>
-                <p>Contact us for fast, reliable, and affordable computer services at your convenience.</p>
+                <h6 class="text-info">Our Services Include:</h6>
+                <ul>
+                    <li>Primary health check-ups.</li>
+                    <li>Blood pressure, sugar level, cholesterol measurements.</li>
+                    <li>Sample collection for laboratory tests.</li>
+                    <li>Health management and consultation.</li>
+                    <li>Report collection and analysis.</li>
+                </ul>
+                <p class="text-muted">
+                    <strong>QuickHealth:</strong> Experience a healthier and more confident life with our trusted services!
+</p>
+                </div>
+                <!-- Bangla Content -->
+                <div class="lang-content lang-bn" style="display: none;">
+<h6 class="text-success">আপনার স্বাস্থ্যের সুরক্ষা আমাদের অগ্রাধিকার</h6>
+                <p>
+                    <strong>QuickHealth</strong> এমন একটি উদ্ভাবনী স্বাস্থ্যসেবা যা আপনার দরজায় সেরা সেবা পৌঁছে দেয়। ক্লিনিকের দীর্ঘ অপেক্ষার দিন শেষ! এখন ঘরে বসেই প্রাথমিক স্বাস্থ্য পরীক্ষা, বিভিন্ন টেস্ট এবং ওষুধ সরবরাহের সুবিধা উপভোগ করুন।
+                </p>
+                <h6 class="text-primary">কেন বেছে নিবেন QuickHealth?</h6>
+                <ul>
+                    <li>অভিজ্ঞ এবং প্রশিক্ষিত স্বাস্থ্যকর্মীদের দ্রুত ও নির্ভুল সেবা।</li>
+                    <li>বাড়িতে বসেই ব্লাড প্রেসার, সুগার, কোলেস্টেরলসহ প্রাথমিক পরীক্ষা।</li>
+                    <li>বিশেষ টেস্টের নমুনা সংগ্রহ ও দ্রুত প্রসেসিং।</li>
+                    <li>নির্ভরযোগ্য এবং দ্রুত ওষুধ সরবরাহ সেবা।</li>
+                    <li>স্বাস্থ্য পরিস্থিতি পর্যবেক্ষণের জন্য রিপোর্ট ট্র্যাকিং।</li>
+                </ul>
+                <h6 class="text-info">আমাদের সেবা অন্তর্ভুক্ত করে:</h6>
+                <ul>
+                    <li>প্রাথমিক স্বাস্থ্য পরীক্ষা।</li>
+                    <li>ব্লাড প্রেসার, সুগার, কোলেস্টেরল মাপা।</li>
+                    <li>বিভিন্ন ল্যাব টেস্টের নমুনা সংগ্রহ।</li>
+                    <li>স্বাস্থ্য ব্যবস্থাপনা ও পরামর্শ।</li>
+                    <li>রিপোর্ট সংগ্রহ এবং বিশ্লেষণ।</li>
+                </ul>
+                <p class="text-muted">
+                    <strong>QuickHealth:</strong> সুস্থ জীবন, আত্মবিশ্বাসী জীবন উপভোগ করুন!
+                </p>
+                </div>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer justify-content-end">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <a href="#contact" class="btn btn-primary">Contact Us</a>
             </div>
@@ -293,26 +320,57 @@
     </div>
 </div>
 
-<!-- Food Delivery Modal -->
-<div class="modal fade" id="foodModal" tabindex="-1" aria-labelledby="foodModalLabel" aria-hidden="true">
+    <!-- Fixfast Modal -->
+
+<div class="modal fade" id="fixfastModal" tabindex="-1" aria-labelledby="fixfastModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="foodModalLabel">FlavorRush</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <h5 class="modal-title" id="fixfastModalLabel">FixFast</h5>
+                <div class="d-flex align-items-center">
+                    <!-- Language Switcher Buttons -->
+                    <button class="btn btn-outline-primary btn-sm me-2" data-lang-switch data-lang="en" data-modal="fixfastModal">English</button>
+                    <button class="btn btn-outline-success btn-sm" data-lang-switch data-lang="bn" data-modal="fixfastModal">বাংলা</button>
+                    <button type="button" class="btn-close ms-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
             </div>
             <div class="modal-body">
-                <p>Craving something delicious? Our FlavorRush service brings a wide variety of meals from local restaurants straight to your doorstep. Whether it's a quick snack or a full meal, we've got you covered!</p>
-                <ul>
-                    <li>Wide range of cuisines to choose from</li>
-                    <li>Timely delivery right to your home</li>
-                    <li>Freshly prepared meals from trusted restaurants</li>
-                    <li>Track your delivery in real time</li>
-                    <li>Order from the comfort of your home</li>
-                </ul>
-                <p>Order your favorite food now and enjoy a delicious meal delivered at your doorstep!</p>
+                <!-- English Content -->
+                <div class="lang-content lang-en">
+                    <h6>Quick Solutions for Everyday Repairs</h6>
+                    <p>
+                        <strong>FixFast</strong> is your go-to solution for all plumbing, electrical, and home repair needs. Our trusted professionals ensure quick, efficient, and quality service that keeps your home running smoothly. No hassle, no delays—just reliable repairs at your convenience.
+                    </p>
+                    <h6>Why Choose FixFast?</h6>
+                    <ul>
+                        <li>Skilled technicians available on-demand.</li>
+                        <li>Fast response times for urgent repairs.</li>
+                        <li>Affordable pricing with transparent estimates.</li>
+                        <li>Guaranteed satisfaction and long-lasting solutions.</li>
+                    </ul>
+                    <p>
+                        From leaky faucets to electrical malfunctions, <strong>FixFast</strong> is here to provide swift and dependable services that restore your comfort. Experience the ease of professional repairs, delivered when you need them most.
+                    </p>
+                </div>
+                <!-- Bangla Content -->
+                <div class="lang-content lang-bn" style="display: none;">
+                    <h6>দ্রুত সমাধান আপনার দৈনন্দিন মেরামতের জন্য</h6>
+                    <p>
+                        <strong>FixFast</strong> আপনার বাসার প্লাম্বিং, ইলেক্ট্রিক্যাল এবং অন্যান্য মেরামতের সব ধরনের চাহিদার জন্য আদর্শ সমাধান। আমাদের বিশ্বস্ত পেশাজীবীরা দ্রুত, দক্ষ এবং মানসম্পন্ন পরিষেবা প্রদান করেন যা আপনার বাড়ির কার্যক্রম নির্বিঘ্ন রাখে। ঝামেলা ছাড়াই, দেরি ছাড়াই—বিশ্বস্ত মেরামতের জন্য আমাদের উপর ভরসা রাখুন।
+                    </p>
+                    <h6>কেন FixFast বেছে নেবেন?</h6>
+                    <ul>
+                        <li>দক্ষ টেকনিশিয়ানরা সর্বদা প্রস্তুত।</li>
+                        <li>জরুরি মেরামতের জন্য দ্রুত সাড়া।</li>
+                        <li>স্বচ্ছ হিসাবসহ সাশ্রয়ী মূল্য।</li>
+                        <li>গ্যারান্টিযুক্ত সেবা ও দীর্ঘস্থায়ী সমাধান।</li>
+                    </ul>
+                    <p>
+                        লিক করা কল থেকে শুরু করে ইলেক্ট্রিক্যাল সমস্যার সমাধান পর্যন্ত, <strong>FixFast</strong> আপনাকে দ্রুত এবং নির্ভরযোগ্য সেবা প্রদান করে যা আপনার আরাম ফিরিয়ে আনে। পেশাদার মেরামতের অভিজ্ঞতা নিন, যখনই প্রয়োজন।
+                    </p>
+                </div>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer justify-content-end">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <a href="#contact" class="btn btn-primary">Contact Us</a>
             </div>
@@ -320,6 +378,99 @@
     </div>
 </div>
 
+<!-- TechMate Modal -->
+
+<div class="modal fade" id="techmateModal" tabindex="-1" aria-labelledby="techmateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <h5 class="modal-title" id="techmateModalLabel">TechMate</h5>
+                <div class="d-flex align-items-center">
+                    <!-- Language Switcher Buttons -->
+                    <button class="btn btn-outline-primary btn-sm me-2" data-lang-switch data-lang="en" data-modal="techmateModal">English</button>
+                    <button class="btn btn-outline-success btn-sm" data-lang-switch data-lang="bn" data-modal="techmateModal">বাংলা</button>
+                    <button type="button" class="btn-close ms-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <!-- English Content -->
+                <div class="lang-content lang-en">
+                    <h6>Your Trusted Partner for Tech Repairs</h6>
+                    <p>
+                        <strong>TechMate</strong> offers expert solutions for mobile and computer repair services. Whether it’s a cracked screen, software issues, or hardware repairs, we ensure efficient and quality service that restores your devices to their optimal performance.
+                    </p>
+                    <h6>Why Choose TechMate?</h6>
+                    <ul>
+                        <li>Certified technicians with years of experience.</li>
+                        <li>Quick turnaround time for all repair needs.</li>
+                        <li>Transparent pricing and reliable service.</li>
+                        <li>Support for all major brands and models.</li>
+                    </ul>
+                    <p>
+                        With <strong>TechMate</strong>, your gadgets are in safe hands. Experience hassle-free repairs and top-notch support, ensuring your devices are always ready to perform.
+                    </p>
+                </div>
+                <!-- Bangla Content -->
+                <div class="lang-content lang-bn" style="display: none;">
+                    <h6>আপনার প্রযুক্তিগত সমস্যার বিশ্বস্ত সঙ্গী</h6>
+                    <p>
+                        <strong>TechMate</strong> মোবাইল এবং কম্পিউটার মেরামতের জন্য বিশেষজ্ঞ সেবা প্রদান করে। ভাঙা স্ক্রিন, সফটওয়্যার সমস্যা, বা হার্ডওয়্যার মেরামত—আমরা আপনার ডিভাইসগুলিকে সঠিক কার্যক্ষমতায় ফিরিয়ে আনতে দক্ষ এবং মানসম্পন্ন সেবা নিশ্চিত করি।
+                    </p>
+                    <h6>কেন TechMate বেছে নেবেন?</h6>
+                    <ul>
+                        <li>সার্টিফাইড টেকনিশিয়ানদের বহু বছরের অভিজ্ঞতা।</li>
+                        <li>সব ধরনের মেরামতের জন্য দ্রুত পরিষেবা।</li>
+                        <li>স্বচ্ছ মূল্য এবং নির্ভরযোগ্য সেবা।</li>
+                        <li>সব প্রধান ব্র্যান্ড এবং মডেলের জন্য সাপোর্ট।</li>
+                    </ul>
+                    <p>
+                        <strong>TechMate</strong>-এর সাথে, আপনার গ্যাজেট নিরাপদ হাতে থাকবে। ঝামেলাহীন মেরামত এবং উন্নত সাপোর্ট উপভোগ করুন, নিশ্চিত করুন আপনার ডিভাইস সর্বদা কাজের জন্য প্রস্তুত।
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-end">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FlavourRush Modal -->
+<div class="modal fade" id="flavourRushModal" tabindex="-1" aria-labelledby="flavourRushModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <h5 class="modal-title" id="flavourRushModalLabel">FlavourRush</h5>
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-outline-primary btn-sm me-2" data-lang-switch data-lang="en" data-modal="flavourRushModal">English</button>
+                    <button class="btn btn-outline-success btn-sm" data-lang-switch data-lang="bn" data-modal="flavourRushModal">বাংলা</button>
+                    <button type="button" class="btn-close ms-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <!-- English Content -->
+                <div class="lang-content lang-en">
+                    <h6>Your Favourite Flavours Delivered Fast</h6>
+                    <p>
+                        FlavourRush brings your favourite meals, snacks, and beverages right to your doorstep. No matter what you crave, we’re here to deliver it fast and fresh. From hot meals to refreshing drinks, we provide a wide range of options for every taste.
+                    </p>
+                </div>
+                <!-- Bangla Content -->
+                <div class="lang-content lang-bn" style="display: none;">
+                    <h6>আপনার প্রিয় স্বাদ দ্রুত পৌঁছে দিন</h6>
+                    <p>
+                        FlavourRush আপনার প্রিয় খাবার, স্ন্যাকস এবং পানীয় সরাসরি আপনার দরজায় পৌঁছে দেয়। আপনার যেকোনো ইচ্ছা পূরণ করতে আমরা প্রস্তুত। গরম খাবার থেকে তাজা পানীয়, আমরা প্রতিটি রুচির জন্য বিস্তৃত পরিসর সরবরাহ করি।
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-end">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Daily Essentials Modal -->
 <div class="modal fade" id="essentialsModal" tabindex="-1" aria-labelledby="essentialsModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -410,5 +561,33 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Common Language Switcher Script
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all language buttons
+        const langButtons = document.querySelectorAll('[data-lang-switch]');
+
+        langButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Get language and modal identifier
+                const lang = this.dataset.lang;
+                const modalId = this.dataset.modal;
+
+                // Find the corresponding language contents
+                const modalContents = document.querySelectorAll(`#${modalId} .lang-content`);
+
+                modalContents.forEach(content => {
+                    if (content.classList.contains(`lang-${lang}`)) {
+                        content.style.display = 'block';
+                    } else {
+                        content.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
 </body>
 </html>
+
